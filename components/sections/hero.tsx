@@ -18,7 +18,7 @@ export async function Hero() {
 
     // Fallback content if no data in Sanity
     const heading = data?.heading || "Driving Success Through Digital Expertise"
-    const subheading = data?.subheading || "Pioneering tomorrow’s technology solutions with minimalist precision and innovative thinking."
+    const subheading = data?.subheading || "Pioneering tomorrow's technology solutions with minimalist precision and innovative thinking."
     const ctaText = data?.ctaText || "Get Started"
     const ctaLink = data?.ctaLink || "/contact"
     const bgImage = data?.backgroundImage ? urlForImage(data.backgroundImage).url() : null
@@ -45,17 +45,17 @@ export async function Hero() {
                         </div>
                     </div>
 
-                    <h1 className="font-display text-5xl font-bold tracking-tight sm:text-7xl mb-8">
+                    <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight sm:text-7xl mb-8">
                         <span className="text-foreground">Driving Success Through </span>
                         <span className="text-gradient">Digital Expertise</span>
                     </h1>
 
-                    <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
+                    <p className="mt-6 text-base md:text-lg leading-8 text-muted-foreground max-w-2xl mx-auto px-4">
                         {subheading}
                     </p>
 
-                    <div className="mt-10 flex items-center justify-center gap-x-6">
-                        <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 hover:shadow-primary/50 transition-all duration-300 text-lg px-8 py-6 h-auto rounded-full">
+                    <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 px-4">
+                        <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 hover:shadow-primary/50 transition-all duration-300 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto rounded-full">
                             <Link href={ctaLink}>{ctaText}</Link>
                         </Button>
                         <Link href="/services" className="text-sm font-semibold leading-6 text-foreground hover:text-accent transition-colors flex items-center gap-2 group">

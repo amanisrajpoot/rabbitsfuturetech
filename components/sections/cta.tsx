@@ -13,15 +13,15 @@ export function CTA() {
             <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/30 rounded-full blur-[100px] animate-pulse" />
             <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent/30 rounded-full blur-[100px] animate-pulse delay-1000" />
 
-            <div className="mx-auto max-w-2xl text-center relative z-10">
+            <div className="mx-auto max-w-2xl text-center relative z-10 px-4">
                 <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
                     Ready to <span className="text-gradient">Future-Proof</span> Your Business?
                 </h2>
-                <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
+                <p className="mx-auto mt-6 max-w-xl text-base md:text-lg leading-8 text-muted-foreground">
                     Join the forward-thinking companies that are transforming their industries with our cutting-edge solutions.
                 </p>
-                <div className="mt-10 flex items-center justify-center gap-x-6">
-                    <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 hover:shadow-primary/50 transition-all duration-300 text-lg px-8 py-6 h-auto rounded-full">
+                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
+                    <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 hover:shadow-primary/50 transition-all duration-300 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto rounded-full">
                         <Link href="/contact">Get Started Today</Link>
                     </Button>
                     <Link href="/services" className="text-sm font-semibold leading-6 text-foreground hover:text-accent transition-colors flex items-center gap-2 group">
