@@ -1,5 +1,11 @@
 import { Section } from '@/components/ui/section'
 import { WhyUs } from '@/components/sections/why-us'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'About Us',
+    description: 'Learn more about Rabbits Future Tech, our mission, and our team of experts dedicated to your digital transformation.',
+}
 
 export default async function AboutPage() {
     return (

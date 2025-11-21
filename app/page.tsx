@@ -11,7 +11,7 @@ export default async function Home() {
     <>
       <Hero />
       <Stats />
-      <Services limit={6} showViewAll />
+      <Services limit={6} showViewAll excludeIds={['5', '6', '7']} />
       <WhyUs />
       <Testimonials />
       <CTA />

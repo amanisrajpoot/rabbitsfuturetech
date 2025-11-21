@@ -1,10 +1,10 @@
 import { Section } from '@/components/ui/section'
 
 const stats = [
-    { id: 1, name: 'Years of Innovation', value: '10+' },
+    { id: 1, name: 'Years of Innovation', value: '5+' },
     { id: 2, name: 'Projects Delivered', value: '500+' },
-    { id: 3, name: 'Global Partners', value: '50+' },
-    { id: 4, name: 'Team Experts', value: '100+' },
+    { id: 3, name: 'Global Partners', value: '20+' },
+    { id: 4, name: 'Team Experts', value: '50+' },
 ]
 
 export function Stats() {

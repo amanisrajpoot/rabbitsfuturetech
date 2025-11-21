@@ -97,8 +97,8 @@ export default function PartnersPage() {
                         <div key={partner.id} className="glass-panel p-6 rounded-xl border-0 hover:border-primary/30 transition-all duration-300 hover:glow-hover group">
                             <div className="mb-3">
                                 <span className={`px-3 py-1 rounded-full text-xs ${partner.tier === 'Strategic'
-                                        ? 'bg-accent/20 text-accent border border-accent/30'
-                                        : 'bg-primary/10 text-primary border border-primary/20'
+                                    ? 'bg-accent/20 text-accent border border-accent/30'
+                                    : 'bg-primary/10 text-primary border border-primary/20'
                                     }`}>
                                     {partner.tier} Partner
                                 </span>
@@ -128,7 +128,7 @@ export default function PartnersPage() {
                         ))}
                     </div>
                     <Link
-                        href="/contact"
+                        href="/partners/apply"
                         className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary hover:bg-primary/90 text-white transition-all duration-300 shadow-lg shadow-primary/25 hover:shadow-primary/50"
                     >
                         Apply to Partner Program

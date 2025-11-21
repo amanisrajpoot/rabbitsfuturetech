@@ -16,39 +16,41 @@ export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-                <div className="flex lg:flex-1">
-                    <Link href="/" className="-m-1.5 p-1.5 text-xl md:text-2xl font-bold tracking-tight text-primary">
-                        <span className="hidden md:inline">RABBITS FUTURE TECH</span>
-                        <span className="md:hidden">RFT</span>
-                    </Link>
-                </div>
-                <div className="flex lg:hidden">
-                    <button
-                        type="button"
-                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-muted-foreground hover:text-foreground transition-colors"
-                        onClick={() => setMobileMenuOpen(true)}
-                    >
-                        <span className="sr-only">Open main menu</span>
-                        <Menu className="h-6 w-6" aria-hidden="true" />
-                    </button>
-                </div>
-                <div className="hidden lg:flex lg:gap-x-12">
-                    {navigation.map((item) => (
-                        <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors">
-                            {item.name}
+        <>
+            <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+                <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+                    <div className="flex lg:flex-1">
+                        <Link href="/" className="-m-1.5 p-1.5 text-xl md:text-2xl font-bold tracking-tight text-primary">
+                            <span className="hidden md:inline">RABBITS FUTURE TECH</span>
+                            <span className="md:hidden">RFT</span>
                         </Link>
-                    ))}
-                </div>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Button asChild>
-                        <Link href="/contact">Get Started</Link>
-                    </Button>
-                </div>
-            </nav>
+                    </div>
+                    <div className="flex lg:hidden">
+                        <button
+                            type="button"
+                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-muted-foreground hover:text-foreground transition-colors"
+                            onClick={() => setMobileMenuOpen(true)}
+                        >
+                            <span className="sr-only">Open main menu</span>
+                            <Menu className="h-6 w-6" aria-hidden="true" />
+                        </button>
+                    </div>
+                    <div className="hidden lg:flex lg:gap-x-12">
+                        {navigation.map((item) => (
+                            <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors">
+                                {item.name}
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+                        <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
+                            <Link href="/get-started">Get Started</Link>
+                        </Button>
+                    </div>
+                </nav>
+            </header>
 
-            {/* Mobile menu */}
+            {/* Mobile menu - rendered outside header for proper full-screen overlay */}
             {mobileMenuOpen && (
                 <div className="lg:hidden">
                     {/* Backdrop */}
@@ -92,7 +94,7 @@ export function Header() {
                                 </div>
                                 <div className="py-6">
                                     <Button className="w-full" asChild>
-                                        <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
+                                        <Link href="/get-started" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
                                     </Button>
                                 </div>
                             </div>
@@ -100,6 +102,6 @@ export function Header() {
                     </div>
                 </div>
             )}
-        </header>
+        </>
     )
 }

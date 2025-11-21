@@ -18,9 +18,10 @@ async function getServices() {
 interface ServicesProps {
     limit?: number;
     showViewAll?: boolean;
+    excludeIds?: string[];
 }
 
-export async function Services({ limit, showViewAll }: ServicesProps) {
+export async function Services({ limit, showViewAll, excludeIds = [] }: ServicesProps) {
     const services = await getServices()
 
     // Fallback services if no data
@@ -83,7 +84,11 @@ export async function Services({ limit, showViewAll }: ServicesProps) {
         }
     ]
 
-    const displayServices = limit ? allServices.slice(0, limit) : allServices;
+    const filteredServices = excludeIds.length > 0
+        ? allServices.filter((service: any) => !excludeIds.includes(service._id))
+        : allServices;
+
+    const displayServices = limit ? filteredServices.slice(0, limit) : filteredServices;
 
     return (
         <Section id="services" className="bg-background relative overflow-hidden py-24 sm:py-32">

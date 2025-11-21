@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Section } from '@/components/ui/section'
 import { client } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
+import { ArrowRight } from 'lucide-react'
 
 async function getHeroData() {
     try {
@@ -20,7 +21,7 @@ export async function Hero() {
     const heading = data?.heading || "Driving Success Through Digital Expertise"
     const subheading = data?.subheading || "Pioneering tomorrow's technology solutions with minimalist precision and innovative thinking."
     const ctaText = data?.ctaText || "Get Started"
-    const ctaLink = data?.ctaLink || "/contact"
+    const ctaLink = data?.ctaLink || "/get-started"
     const bgImage = data?.backgroundImage ? urlForImage(data.backgroundImage).url() : null
 
     return (
@@ -56,7 +57,10 @@ export async function Hero() {
 
                     <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 px-4">
                         <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 hover:shadow-primary/50 transition-all duration-300 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto rounded-full">
-                            <Link href={ctaLink}>{ctaText}</Link>
+                            <Link href={ctaLink}>
+                                {ctaText}
+                                <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
                         </Button>
                         <Link href="/services" className="text-sm font-semibold leading-6 text-foreground hover:text-accent transition-colors flex items-center gap-2 group">
                             Explore Services <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform">→</span>

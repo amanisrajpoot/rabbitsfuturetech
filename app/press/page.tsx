@@ -85,16 +85,16 @@ export default function PressPage() {
                             <div className="space-y-4">
                                 <div>
                                     <p className="text-sm text-muted-foreground mb-1">Press Inquiries</p>
-                                    <a href="mailto:press@rabbitsfuturetech.com" className="flex items-center gap-2 text-accent hover:text-primary transition-colors">
+                                    <a href="mailto:info@rabbitsfuturetech.com" className="flex items-center gap-2 text-accent hover:text-primary transition-colors">
                                         <Mail className="h-4 w-4" />
-                                        press@rabbitsfuturetech.com
+                                        info@rabbitsfuturetech.com
                                     </a>
                                 </div>
                                 <div>
                                     <p className="text-sm text-muted-foreground mb-1">Phone</p>
-                                    <a href="tel:+1-555-123-4567" className="flex items-center gap-2 text-accent hover:text-primary transition-colors">
+                                    <a href="tel:+917300313898" className="flex items-center gap-2 text-accent hover:text-primary transition-colors">
                                         <Phone className="h-4 w-4" />
-                                        +1 (555) 123-4567
+                                        +91-730-031-3898
                                     </a>
                                 </div>
                             </div>

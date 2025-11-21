@@ -1,5 +1,11 @@
 import { Contact } from '@/components/sections/contact'
 import { Section } from '@/components/ui/section'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Contact Us',
+    description: 'Get in touch with Rabbits Future Tech. We are here to help you with your digital transformation needs.',
+}
 
 export default async function ContactPage() {
     return (

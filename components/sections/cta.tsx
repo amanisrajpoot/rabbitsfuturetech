@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Section } from '@/components/ui/section'
+import { ArrowRight } from 'lucide-react'
 
 export function CTA() {
     return (
@@ -22,7 +23,10 @@ export function CTA() {
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
                     <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 hover:shadow-primary/50 transition-all duration-300 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto rounded-full">
-                        <Link href="/contact">Get Started Today</Link>
+                        <Link href="/get-started">
+                            Get Started Today
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
                     </Button>
                     <Link href="/services" className="text-sm font-semibold leading-6 text-foreground hover:text-accent transition-colors flex items-center gap-2 group">
                         View Services <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform">→</span>
